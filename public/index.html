@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback event viewer</title>
+	<link href="https://d3l0ifulerbodr.cloudfront.net/main.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+ var socket = io();
+  socket.on('inboundEvent', function(event) {
+    $('#inboundCallback').append(event);
+  });
+  socket.on('outboundEvent', function(event) {
+    $('#outboundCallback').append(event);
+  });
+	</script>
+</head>
+<body>
+<div class="ta-form-input clearfix">
+    <label for="textarea">Inbound Callbacks:</label>
+    <textarea rows="3" id="inboundCallback"></textarea>
+</div>
+<div class="ta-form-input clearfix">
+    <label for="textarea">Outbound Callbacks:</label>
+    <textarea rows="3" id="outboundCallback"></textarea>
+</div>
+</body>
+</html>
