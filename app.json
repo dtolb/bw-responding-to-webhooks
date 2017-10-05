@@ -14,5 +14,6 @@
     "BANDWIDTH_API_SECRET": {
       "description": "Your Bandwidth API Secret, like: ja35ijsadfoi"
     }
-  }
+  },
+  "addons": []
 }
